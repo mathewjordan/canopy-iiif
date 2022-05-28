@@ -13,6 +13,7 @@ const typeDefs = gql`
     collectionItems: [CollectionItem]
     manifests(limit: Int, offset: Int, id: [String]): [Manifest]
     metadata(id: String, label: String): [Metadata]
+    metadataItems(id: String, label: String, valueOfMetadata: String): [Manifest]
     allManifests: [Manifest]
     getManifest(slug: ID): Manifest
   }
@@ -41,6 +42,8 @@ const typeDefs = gql`
     label: [String]
     metadata: [Metadata]
     slug: ID
+    thumbnail: String
+    summary: String
   }
 
   type Metadata {
@@ -136,6 +139,59 @@ const resolvers = {
                         thumbnail: manifest.thumbnail[0].id,
                       };
                       data.push(result);
+                    });
+                  }
+                });
+              });
+            return data;
+          });
+        });
+      });
+    },
+    metadataItems: async (_, { id, label, valueOfMetadata }, context) => {
+      let filterByLabels = process.env.metadata;
+      if (label) filterByLabels = [label as string];
+
+      return getCollectionData().then((tree) => {
+        return Promise.all(tree).then((values) => {
+          let items = [];
+          if (id) {
+            items.push({ id, type: "Manifest" });
+          } else {
+            values.forEach((results) => {
+              if (results)
+                results.items.forEach((element) => {
+                  items.push(element);
+                });
+            });
+          }
+
+          const responses = getBulkManifests(items, 10);
+
+          return responses.then((manifests) => {
+            let data = [];
+            manifests
+              .filter((manifest) => {
+                if (manifest) return manifest;
+              })
+              .map((manifest) => {
+                manifest.metadata.forEach((metadata) => {
+                  const metadataLabel = getValues(metadata.label)[0];
+                  const metadataValues = getValues(metadata.value);
+                  if (filterByLabels.includes(metadataLabel)) {
+                    metadataValues.forEach((value) => {
+                      if(value === valueOfMetadata){
+                        const result = {
+                          id: manifest.id,
+                          label: getValues(manifest.label),
+                          metadata: manifest.metadata,
+                          thumbnail: manifest.thumbnail[0].id,
+                          slug: manifest.id,
+                          summary: getValues(manifest.summary)[0],
+                          collectionId: `api/iiif/metadata/${metadataLabel}/${value}`,
+                        };
+                        data.push(result);
+                      }
                     });
                   }
                 });
