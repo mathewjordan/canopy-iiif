@@ -1,0 +1,45 @@
+{
+  "@context": ["http://iiif.io/api/presentation/3/context.json"],
+  "id": "http://localhost:5001/fixtures/iiif-dev/collection/north-american.json",
+  "type": "Collection",
+  "label": {
+    "en": ["The North American"]
+  },
+  "items": [
+    {
+      "id": "http://localhost:5001/fixtures/iiif-dev/manifest/uncategorized/shores-of-nootka-sound.json",
+      "type": "Manifest",
+      "label": {
+        "en": ["Shores of Nootka Sound"]
+      }
+    },
+    {
+      "id": "http://localhost:5001/fixtures/iiif-dev/collection/apache.json",
+      "type": "Collection",
+      "label": {
+        "en": ["Apache"]
+      }
+    },
+    {
+      "id": "http://localhost:5001/fixtures/iiif-dev/collection/nez-perce-joseph.json",
+      "type": "Collection",
+      "label": {
+        "en": ["Joseph - Nez Percé"]
+      }
+    },
+    {
+      "id": "http://localhost:5001/fixtures/iiif-dev/collection/nez-perce.json",
+      "type": "Collection",
+      "label": {
+        "en": ["Nez Percé (Nimíipuu)"]
+      }
+    },
+    {
+      "id": "http://localhost:5001/fixtures/iiif-dev/collection/tsawatenok.json",
+      "type": "Collection",
+      "label": {
+        "en": ["Tsawatenok (Tsawataineuk)"]
+      }
+    }
+  ]
+}

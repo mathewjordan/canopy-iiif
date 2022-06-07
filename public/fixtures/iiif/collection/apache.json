@@ -1,0 +1,94 @@
+{
+  "@context": ["http://iiif.io/api/presentation/3/context.json"],
+  "id": "https://canopy-iiif.vercel.app/fixtures/iiif/collection/apache.json",
+  "type": "Collection",
+  "label": {
+    "en": ["Apache"]
+  },
+  "items": [
+    {
+      "id": "https://canopy-iiif.vercel.app/fixtures/iiif/manifest/apache/01-geronimo.json",
+      "type": "Manifest",
+      "label": {
+        "en": ["Geronimo - Apache"]
+      }
+    },
+    {
+      "id": "https://canopy-iiif.vercel.app/fixtures/iiif/manifest/apache/02-the-storm.json",
+      "type": "Manifest",
+      "label": {
+        "en": ["The Storm - Apache"]
+      }
+    },
+    {
+      "id": "https://canopy-iiif.vercel.app/fixtures/iiif/manifest/apache/03-eskadi.json",
+      "type": "Manifest",
+      "label": {
+        "en": ["Éskadi - Apache"]
+      }
+    },
+    {
+      "id": "https://canopy-iiif.vercel.app/fixtures/iiif/manifest/apache/04-apache-camp.json",
+      "type": "Manifest",
+      "label": {
+        "en": ["Apache Camp"]
+      }
+    },
+    {
+      "id": "https://canopy-iiif.vercel.app/fixtures/iiif/manifest/apache/05-mescal-harvest.json",
+      "type": "Manifest",
+      "label": {
+        "en": ["Mescal Harvest - Apache"]
+      }
+    },
+    {
+      "id": "https://canopy-iiif.vercel.app/fixtures/iiif/manifest/apache/06-the-apache.json",
+      "type": "Manifest",
+      "label": {
+        "en": ["The Apache"]
+      }
+    },
+    {
+      "id": "https://canopy-iiif.vercel.app/fixtures/iiif/manifest/apache/07-sigesh.json",
+      "type": "Manifest",
+      "label": {
+        "en": ["Sígēsh - Apache"]
+      }
+    },
+    {
+      "id": "https://canopy-iiif.vercel.app/fixtures/iiif/manifest/apache/08-white-river.json",
+      "type": "Manifest",
+      "label": {
+        "en": ["White River - Apache"]
+      }
+    },
+    {
+      "id": "https://canopy-iiif.vercel.app/fixtures/iiif/manifest/apache/09-guan.json",
+      "type": "Manifest",
+      "label": {
+        "en": ["Apache Gáŭn"]
+      }
+    },
+    {
+      "id": "https://canopy-iiif.vercel.app/fixtures/iiif/manifest/apache/10-story-telling.json",
+      "type": "Manifest",
+      "label": {
+        "en": ["Story Telling - Apache"]
+      }
+    },
+    {
+      "id": "https://canopy-iiif.vercel.app/fixtures/iiif/manifest/apache/11-chideh.json",
+      "type": "Manifest",
+      "label": {
+        "en": ["Chidéh - Apache"]
+      }
+    },
+    {
+      "id": "https://canopy-iiif.vercel.app/fixtures/iiif/manifest/apache/12-das-lan.json",
+      "type": "Manifest",
+      "label": {
+        "en": ["Das Lan - Apache"]
+      }
+    }
+  ]
+}

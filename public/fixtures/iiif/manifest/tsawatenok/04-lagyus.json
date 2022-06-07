@@ -1,0 +1,137 @@
+{
+  "@context": "http://iiif.io/api/presentation/3/context.json",
+  "id": "https://canopy-iiif.vercel.app/fixtures/iiif/manifest/tsawatenok/04-lagyus.json",
+  "type": "Manifest",
+  "label": {
+    "en": ["Lágyus - Tsawatenok"]
+  },
+  "summary": {
+    "en": [
+      "written, illustrated, and published by Edward S. Curtis ; edited by Frederick Webb Hodge ; foreword by Theodore Roosevelt ; field research conducted under the patronage of J. Pierpont Morgan. ; Original photogravures produced in Boston by John Andrew & Son in 1914."
+    ]
+  },
+  "metadata": [
+    {
+      "label": { "en": ["Contributor"] },
+      "value": {
+        "en": [
+          "Curtis, Edward S., 1868-1952 (Author)",
+          "Curtis, Edward S., 1868-1952 (Illustrator)",
+          "Curtis, Edward S., 1868-1952 (Publisher)",
+          "Hodge, Frederick Webb, 1864-1956 (Editor)",
+          "Roosevelt, Theodore, 1858-1919 (Author of introduction, etc.)",
+          "Morgan, J. Pierpont (John Pierpont), 1837-1913 (Patron)",
+          "John Andrew & Son (Printmaker)",
+          "Plimpton Press (Publisher)"
+        ]
+      }
+    },
+    {
+      "label": { "en": ["Cultural Context"] },
+      "value": {
+        "en": [
+          "Content on this site is drawn from a historical source which includes materials that may contain offensive images or language reflecting the nature of Settler Colonialism in America. Such materials should be viewed in the context of the time and place in which they were created. The images and text in this site are presented as specific, original artifacts recording the attitudes, perspectives and beliefs of a different era. Northwestern University does not endorse the views expressed in this collection which may contain images and text offensive to some researchers."
+        ]
+      }
+    },
+    {
+      "label": { "en": ["Date"] },
+      "value": { "en": ["1914"] }
+    },
+    {
+      "label": { "en": ["Dimensions"] },
+      "value": {
+        "en": ["19 x 13.2 cm [image size], 23 x 16 cm [plate size]"]
+      }
+    },
+    {
+      "label": { "en": ["Genre"] },
+      "value": { "en": ["photomechanical prints", "photogravures (prints)"] }
+    },
+    {
+      "label": { "en": ["Language"] },
+      "value": { "en": ["English"] }
+    },
+    {
+      "label": { "en": ["Location"] },
+      "value": {
+        "en": ["Washington (State)--Seattle", "Massachusetts--Norwood"]
+      }
+    },
+    {
+      "label": { "en": ["Subject"] },
+      "value": {
+        "en": [
+          "Pacific Northwest",
+          "British Columbia",
+          "Kwakiutl Indians",
+          "Koskimo Indians"
+        ]
+      }
+    }
+  ],
+  "requiredStatement": {
+    "label": {
+      "en": ["Attribution"]
+    },
+    "value": {
+      "en": ["Courtesy of Northwestern University Libraries"]
+    }
+  },
+  "rights": "http://rightsstatements.org/vocab/NoC-NC/1.0/",
+  "thumbnail": [
+    {
+      "id": "https://fixtures/iiif.stack.rdc.library.northwestern.edu/fixtures/iiif/2/2959606d-4be4-4c34-a02b-ee1d68a39c9d/full/200,/0/default.jpg",
+      "type": "Image",
+      "format": "image/jpeg",
+      "service": [
+        {
+          "id": "https://fixtures/iiif.stack.rdc.library.northwestern.edu/fixtures/iiif/2/2959606d-4be4-4c34-a02b-ee1d68a39c9d",
+          "profile": "http://iiif.io/api/image/2/level2.json",
+          "type": "ImageService2"
+        }
+      ],
+      "width": 200,
+      "height": 200
+    }
+  ],
+  "items": [
+    {
+      "id": "https://canopy-iiif.vercel.app/fixtures/iiif/manifest/tsawatenok/04-lagyus/canvas/0",
+      "type": "Canvas",
+      "width": 2111,
+      "height": 3072,
+      "label": {
+        "en": ["Lágyus - Tsawatenok"]
+      },
+      "items": [
+        {
+          "id": "https://canopy-iiif.vercel.app/fixtures/iiif/manifest/tsawatenok/04-lagyus/canvas/0/page/0",
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "id": "https://canopy-iiif.vercel.app/fixtures/iiif/manifest/tsawatenok/04-lagyus/canvas/0/page/0/annotation/0",
+              "type": "Annotation",
+              "motivation": "painting",
+              "target": "https://canopy-iiif.vercel.app/fixtures/iiif/manifest/tsawatenok/04-lagyus/canvas/0",
+              "body": {
+                "id": "https://fixtures/iiif.stack.rdc.library.northwestern.edu/fixtures/iiif/2/2959606d-4be4-4c34-a02b-ee1d68a39c9d/full/600,/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "service": [
+                  {
+                    "id": "https://fixtures/iiif.stack.rdc.library.northwestern.edu/fixtures/iiif/2/2959606d-4be4-4c34-a02b-ee1d68a39c9d",
+                    "profile": "http://iiif.io/api/image/2/level2.json",
+                    "type": "ImageService2"
+                  }
+                ],
+                "width": 2111,
+                "height": 3072
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

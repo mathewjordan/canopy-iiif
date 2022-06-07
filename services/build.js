@@ -1,8 +1,7 @@
 const axios = require("axios");
 const slugify = require("slugify");
 
-exports.getRootCollection = (id) =>
-  fetch(id).then((response) => response.json());
+exports.getCollection = (id) => fetch(id).then((response) => response.json());
 
 exports.getBulkManifests = async (items, chunkSize) =>
   await chunks(
@@ -129,6 +128,7 @@ const buildCollectionItems2 = (json, parent) => {
 const buildCollectionItems3 = (json, parent) => {
   let manifests = 0;
   let collections = 0;
+
   return {
     items: json.items.map((item) => {
       /**

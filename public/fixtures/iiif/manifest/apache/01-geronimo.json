@@ -1,0 +1,143 @@
+{
+  "@context": "http://iiif.io/api/presentation/3/context.json",
+  "id": "https://canopy-iiif.vercel.app/fixtures/iiif/manifest/apache/01-geronimo.json",
+  "type": "Manifest",
+  "label": {
+    "en": ["Geronimo - Apache"]
+  },
+  "summary": {
+    "en": [
+      "written, illustrated, and published by Edward S. Curtis ; edited by Frederick Webb Hodge ; foreword by Theodore Roosevelt ; field research conducted under the patronage of J. Pierpont Morgan. ; Original photogravures produced in Boston by John Andrew & Son in 1914."
+    ]
+  },
+  "metadata": [
+    {
+      "label": { "en": ["Contributor"] },
+      "value": {
+        "en": [
+          "Curtis, Edward S., 1868-1952 (Author)",
+          "Curtis, Edward S., 1868-1952 (Illustrator)",
+          "Curtis, Edward S., 1868-1952 (Publisher)",
+          "Hodge, Frederick Webb, 1864-1956 (Editor)",
+          "Roosevelt, Theodore, 1858-1919 (Author of introduction, etc.)",
+          "Morgan, J. Pierpont (John Pierpont), 1837-1913 (Patron)",
+          "John Andrew & Son (Printmaker)",
+          "Plimpton Press (Publisher)"
+        ]
+      }
+    },
+    {
+      "label": { "en": ["Cultural Context"] },
+      "value": {
+        "en": [
+          "Content on this site is drawn from a historical source which includes materials that may contain offensive images or language reflecting the nature of Settler Colonialism in America. Such materials should be viewed in the context of the time and place in which they were created. The images and text in this site are presented as specific, original artifacts recording the attitudes, perspectives and beliefs of a different era. Northwestern University does not endorse the views expressed in this collection which may contain images and text offensive to some researchers."
+        ]
+      }
+    },
+    {
+      "label": { "en": ["Date"] },
+      "value": { "en": ["1907"] }
+    },
+    {
+      "label": { "en": ["Dimensions"] },
+      "value": {
+        "en": ["46 x 31 cm [plate size]"]
+      }
+    },
+    {
+      "label": { "en": ["Genre"] },
+      "value": { "en": ["photomechanical prints", "photogravures (prints)"] }
+    },
+    {
+      "label": { "en": ["Language"] },
+      "value": { "en": ["English"] }
+    },
+    {
+      "label": { "en": ["Location"] },
+      "value": {
+        "en": [
+          "Washington (State)--Seattle",
+          "Massachusetts--Cambridge",
+          "Massachusetts--Boston"
+        ]
+      }
+    },
+    {
+      "label": { "en": ["Subject"] },
+      "value": {
+        "en": [
+          "New Southwest",
+          "Arizona",
+          "New Mexico",
+          "Apache Indians",
+          "Jicarilla Indians",
+          "Navajo Indians"
+        ]
+      }
+    }
+  ],
+  "requiredStatement": {
+    "label": {
+      "en": ["Attribution"]
+    },
+    "value": {
+      "en": ["Courtesy of Northwestern University Libraries"]
+    }
+  },
+  "rights": "http://rightsstatements.org/vocab/NoC-NC/1.0/",
+  "thumbnail": [
+    {
+      "id": "https://fixtures/iiif.stack.rdc.library.northwestern.edu/fixtures/iiif/2/87477db6-ece4-4a45-8332-6fe7fbe2458c/full/200,/0/default.jpg",
+      "type": "Image",
+      "format": "image/jpeg",
+      "service": [
+        {
+          "id": "https://fixtures/iiif.stack.rdc.library.northwestern.edu/fixtures/iiif/2/87477db6-ece4-4a45-8332-6fe7fbe2458c",
+          "profile": "http://iiif.io/api/image/2/level2.json",
+          "type": "ImageService2"
+        }
+      ],
+      "width": 200,
+      "height": 200
+    }
+  ],
+  "items": [
+    {
+      "id": "https://canopy-iiif.vercel.app/fixtures/iiif/manifest/apache/01-geronimo/canvas/0",
+      "type": "Canvas",
+      "width": 3120,
+      "height": 4499,
+      "label": {
+        "en": ["Geronimo - Apache"]
+      },
+      "items": [
+        {
+          "id": "https://canopy-iiif.vercel.app/fixtures/iiif/manifest/apache/01-geronimo/canvas/0/page/0",
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "id": "https://canopy-iiif.vercel.app/fixtures/iiif/manifest/apache/01-geronimo/canvas/0/page/0/annotation/0",
+              "type": "Annotation",
+              "motivation": "painting",
+              "target": "https://canopy-iiif.vercel.app/fixtures/iiif/manifest/apache/01-geronimo/canvas/0",
+              "body": {
+                "id": "https://fixtures/iiif.stack.rdc.library.northwestern.edu/fixtures/iiif/2/87477db6-ece4-4a45-8332-6fe7fbe2458c/full/600,/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "service": [
+                  {
+                    "id": "https://fixtures/iiif.stack.rdc.library.northwestern.edu/fixtures/iiif/2/87477db6-ece4-4a45-8332-6fe7fbe2458c",
+                    "profile": "http://iiif.io/api/image/2/level2.json",
+                    "type": "ImageService2"
+                  }
+                ],
+                "width": 3120,
+                "height": 4499
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

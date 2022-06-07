@@ -1,0 +1,45 @@
+{
+  "@context": ["http://iiif.io/api/presentation/3/context.json"],
+  "id": "https://canopy-iiif.vercel.app/fixtures/iiif/collection/north-american.json",
+  "type": "Collection",
+  "label": {
+    "en": ["The North American"]
+  },
+  "items": [
+    {
+      "id": "https://canopy-iiif.vercel.app/fixtures/iiif/manifest/uncategorized/shores-of-nootka-sound.json",
+      "type": "Manifest",
+      "label": {
+        "en": ["Shores of Nootka Sound"]
+      }
+    },
+    {
+      "id": "https://canopy-iiif.vercel.app/fixtures/iiif/collection/apache.json",
+      "type": "Collection",
+      "label": {
+        "en": ["Apache"]
+      }
+    },
+    {
+      "id": "https://canopy-iiif.vercel.app/fixtures/iiif/collection/nez-perce-joseph.json",
+      "type": "Collection",
+      "label": {
+        "en": ["Joseph - Nez Percé"]
+      }
+    },
+    {
+      "id": "https://canopy-iiif.vercel.app/fixtures/iiif/collection/nez-perce.json",
+      "type": "Collection",
+      "label": {
+        "en": ["Nez Percé (Nimíipuu)"]
+      }
+    },
+    {
+      "id": "https://canopy-iiif.vercel.app/fixtures/iiif/collection/tsawatenok.json",
+      "type": "Collection",
+      "label": {
+        "en": ["Tsawatenok (Tsawataineuk)"]
+      }
+    }
+  ]
+}

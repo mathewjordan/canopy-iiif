@@ -1,0 +1,30 @@
+{
+  "@context": ["http://iiif.io/api/presentation/3/context.json"],
+  "id": "http://localhost:5001/fixtures/iiif-dev/collection/nez-perce-joseph.json",
+  "type": "Collection",
+  "label": {
+    "en": ["Joseph - Nez Percé"]
+  },
+  "items": [
+    {
+      "id": "http://localhost:5001/fixtures/iiif-dev/manifest/nez-perce-joseph/01-joseph.json",
+      "type": "Manifest",
+      "label": "Joseph - Nez Percé"
+    },
+    {
+      "id": "http://localhost:5001/fixtures/iiif-dev/manifest/nez-perce-joseph/02-chief-joseph.json",
+      "type": "Manifest",
+      "label": "Chief Joseph - Nez Percé"
+    },
+    {
+      "id": "http://localhost:5001/fixtures/iiif-dev/manifest/nez-perce-joseph/03-joseph-dead-feast-lodge.json",
+      "type": "Manifest",
+      "label": "Joseph Dead Feast Lodge - Nez Percé"
+    },
+    {
+      "id": "http://localhost:5001/fixtures/iiif-dev/manifest/nez-perce-joseph/04-last-home-of-joseph.json",
+      "type": "Manifest",
+      "label": "Last Home of Joseph - Nez Percé"
+    }
+  ]
+}

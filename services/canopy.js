@@ -1,14 +1,14 @@
 const {
   buildCanopyCollection,
   getBulkManifests,
-  getRootCollection,
+  getCollection,
   getValues,
 } = require("./build");
 const fs = require("fs");
 const slugify = require("slugify");
 
 module.exports.buildCanopy = (env) => {
-  getRootCollection(env.collection).then((json) => {
+  getCollection(env.collection).then((json) => {
     /**
      * set directory to write canopy structure to
      */
@@ -17,32 +17,71 @@ module.exports.buildCanopy = (env) => {
     /**
      * generate collection data
      */
-    console.log(`Generating collection data...`);
-    const canopyCollection = buildCanopyCollection(json, 0, null);
+    console.log(`Generating collection data for ${env.collection}...`);
 
-    try {
-      if (!fs.existsSync(canopyDirectory)) {
-        fs.mkdirSync(canopyDirectory);
-      }
-    } catch (err) {
-      console.error(err);
+    const canopyCollection = [];
+    let depth = 0;
+    let seek = true;
+
+    let currentCollection = buildCanopyCollection(json, depth, null);
+    canopyCollection.push(currentCollection);
+
+    if (currentCollection.collections > 0) seek = true;
+
+    while (seek) {
+      depth++;
+
+      getBulkManifests(
+        currentCollection.items.filter((item) => item.type === "Collection"),
+        10
+      )
+        .then((collections) =>
+          collections.map((item) =>
+            buildCanopyCollection(item, depth, currentCollection.id)
+          )
+        )
+        .then((json) => {
+          json.forEach((entry) => {
+            seek = entry.collections > 0 ? true : false;
+            canopyCollection.push(entry);
+          });
+        });
+
+      console.log(canopyCollection);
+
+      /**
+       * hard code for now to stop recursion
+       */
+      seek = false;
     }
 
-    fs.writeFile(
-      `${canopyDirectory}/collections.json`,
-      JSON.stringify([canopyCollection]),
-      (err) => {
-        if (err) {
-          console.error(err);
+    if (!seek) {
+      // console.log(canopyCollection);
+
+      try {
+        if (!fs.existsSync(canopyDirectory)) {
+          fs.mkdirSync(canopyDirectory);
         }
+      } catch (err) {
+        console.error(err);
       }
-    );
+
+      fs.writeFile(
+        `${canopyDirectory}/collections.json`,
+        JSON.stringify(canopyCollection),
+        (err) => {
+          if (err) {
+            console.error(err);
+          }
+        }
+      );
+    }
 
     /**
      * create manifest listing
      */
     console.log(`Creating manifest listing...`);
-    const canopyManifests = canopyCollection.items
+    const canopyManifests = canopyCollection[0].items
       .filter((item) => item.type === "Manifest")
       .map((item) => {
         return {
