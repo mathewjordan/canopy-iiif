@@ -2,21 +2,20 @@ import { gql } from "@apollo/client";
 import { client } from "@/pages/api/graphql";
 import Layout from "@/components/layout";
 import Viewer from "@/components/Viewer/Viewer";
+import Metatag from "@/components/Metatag/Metatag";
 import { Vault } from "@iiif/vault";
-import {
-  Label,
-  Metadata,
-  RequiredStatement,
-  Summary,
-} from "@samvera/nectar-iiif";
 import Related from "@/components/Related/Related";
 import WorkInner from "@/components/Work/Inner";
+import { getValues } from "@/hooks/getValues";
 
 export default function Manifest({ manifest }) {
-  const { id, label, metadata, requiredStatement, summary } = manifest;
+  const { id, label, metadata, requiredStatement, summary, thumbnail } = manifest;
+  const labelValue = getValues(label);
+  const summaryValue = getValues(summary);
 
   return (
     <Layout>
+      <Metatag label={labelValue} summary={summaryValue} thumbnail={thumbnail}/>
       <div style={{ padding: "1.31rem 0 0" }}>
         <Viewer manifestId={id} />
       </div>

@@ -20,6 +20,16 @@ exports.dev = {
     "https://canopy-iiif.vercel.app/iiif/manifest/nez-perce/02-lawyer.json",
   ],
   metadata: ["Date", "Subject"],
+  seo: {
+    analytics: "",
+    metatags: {
+      googleSiteVerification: "",
+      twitter: {
+        site: "",
+        handle: "",
+      }
+    }
+  }
 };
 
 /**

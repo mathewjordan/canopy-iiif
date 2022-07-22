@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import Layout from "@/components/layout";
 import Hero from "@/components/Hero/Hero";
 import BloomIIIF from "@samvera/bloom-iiif";
+import Metatag from "@/components/Metatag/Metatag";
+import { dev } from "@/canopy.config";
 
 export default function Index({ metadata }) {
   const [baseUrl, setBaseUrl] = useState("");
@@ -13,6 +15,7 @@ export default function Index({ metadata }) {
 
   return (
     <Layout>
+      <Metatag label='Browse Topics' summary={`Browse topics from ${dev.title}`} thumbnail={dev.hero}/>
       <Hero />
       <section
         style={{
